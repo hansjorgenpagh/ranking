@@ -47,10 +47,11 @@ pipeline {
             steps {
                 echo "Hello ${params.PARAMETER_01}"
                 echo "Hello ${params.UP}"
-                echo 'Hello world!' 
+                echo 'Hello world!'
                 sh '/home/hansjorgen/Downloads/apictl-3.2.2-linux-x64/apictl/apictl login dev -u admin -p admin -k'
                 sh '/home/hansjorgen/Downloads/apictl-3.2.2-linux-x64/apictl/apictl export-api -n Strava2 -v 1.0.0 -e dev -k'
-                
+                sh 'cp /home/hansjorgen/.wso2apictl/exported/apis/dev/Strava2_1.0.0.zip cp /home/hansjorgen/.wso2apictl/exported/apis/dev/Strava2_1.0.1.zip'
+                echo 'File copied'
             }
         }
     }
