@@ -38,7 +38,7 @@ pipeline {
                                 name: 'STRING-PARAMETER', 
                                 trim: true
                             ),
-                            { password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'A secret password') }
+                            password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'A secret password')
                         ])
                     ])
                 }
