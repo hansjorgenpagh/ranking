@@ -47,7 +47,9 @@ pipeline {
         stage('Env') {
             steps {
                 sh 'printenv'
-                env.TEST_VARIABLE = "some test value"
+                script {
+                    env.TEST_VARIABLE = "some test value"
+                }
                 sh 'printenv'
             }
         }
