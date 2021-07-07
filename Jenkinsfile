@@ -44,6 +44,11 @@ pipeline {
                 }
             }
         }
+        stage('Env') {
+            steps {
+                sh 'printenv'
+            }
+        }
         stage('Stage 1') {
             steps {
                 echo "Hello ${params.PARAMETER_01}"
