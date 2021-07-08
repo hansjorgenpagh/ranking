@@ -51,6 +51,7 @@ pipeline {
                     env.TEST_VARIABLE = "some test value"
                 }
                 sh 'printenv'
+                sh 'java -jar cli/build/libs/openapi-style-validator-cli-1.7-SNAPSHOT-all.jar -s specs/petstore.yaml -o specs/options.json'
             }
         }
         stage('Stage 1') {
