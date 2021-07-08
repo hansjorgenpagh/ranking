@@ -8,6 +8,7 @@ echo $match->player1Name;
 echo '<br>';
 echo $match->player2Name;
 echo '<br>';
+echo '<br>';
 echo $match->resultat;
 echo '<br>';
 $match = $hjp->getNextMatch();
