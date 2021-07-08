@@ -52,7 +52,9 @@ pipeline {
                 }
                 sh 'printenv'
                 echo 'running java'
+                sh 'pwd'
                 sh 'cd /home/hansjorgen/Downloads/openapi-style-validator-master'
+                sh 'pwd'
                 sh 'java -jar cli/build/libs/openapi-style-validator-cli-1.7-SNAPSHOT-all.jar -s specs/petstore.yaml -o specs/options.json'
                 echo 'Java ran'
             }
