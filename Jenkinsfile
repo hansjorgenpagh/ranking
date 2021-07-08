@@ -52,11 +52,11 @@ pipeline {
                 }
                 sh 'printenv'
                 echo 'running java'
-                sh 'java -jar openapi-style-validator-cli-1.7-SNAPSHOT-all.jar -s /home/hansjorgen/Downloads/openapi-style-validator-master/specs/petstore.yaml -o /home/hansjorgen/Downloads/openapi-style-validator-master/specs/options.json'
+                sh 'java -jar openapi-style-validator-cli-1.7-SNAPSHOT-all.jar -s specs/petstore.yaml -o specs/options.json'
                 sh 'pwd'
                 dir ('cd /home/hansjorgen/Downloads/openapi-style-validator-master') {
                     sh 'pwd'
-                    sh 'java -jar /home/hansjorgen/Downloads/openapi-style-validator-master/cli/build/libs/openapi-style-validator-cli-1.7-SNAPSHOT-all.jar -s /home/hansjorgen/Downloads/openapi-style-validator-master/specs/petstore.yaml -o /home/hansjorgen/Downloads/openapi-style-validator-master/specs/options.json'
+                    //sh 'java -jar /home/hansjorgen/Downloads/openapi-style-validator-master/cli/build/libs/openapi-style-validator-cli-1.7-SNAPSHOT-all.jar -s /home/hansjorgen/Downloads/openapi-style-validator-master/specs/petstore.yaml -o /home/hansjorgen/Downloads/openapi-style-validator-master/specs/options.json'
                     echo 'Java ran'
                 }
             }
